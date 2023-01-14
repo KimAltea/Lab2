@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <title>My Profile</title>
     <link rel="stylesheet" href="style.css">
+    <center>
+        <p id="demo"></p>
+    
+        <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d;
+        </script>
+    </center>
 </head>
 <body>
 <div class="wrapper">
     <div class="left">
         <img src="images/ALTEA-LOGO.png" alt="user" width="250">
-        <h4 style="color:antiquewhite">Kimberly Ann Altea</h4>
-        <h3 style="color:beige"><i>(kimmy)</i></h3>
+        <script>
+            window.alert('Hi guys ^_^');
+            </script>
+        <button type="button" onclick="myFunction()">My Name!</button>
+
+<p id="fullname"></p>
+<p id="nickname"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("fullname").innerHTML = "Kimberly Ann Altea";
+  document.getElementById("nickname").innerHTML = "(kimmy)";
+}
+</script>
+
     </div>
     <div class="right">
        
@@ -29,7 +50,7 @@
             </div>
         </div>
     </div>
-
+   
 </div>
 </div>
 </body>
