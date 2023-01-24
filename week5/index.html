@@ -19,17 +19,42 @@
         <img src="images/ALTEA-LOGO.png" alt="user" width="250">
         <script>
             window.alert('Hi guys ^_^');
+            
             </script>
-        <button type="button" onclick="myFunction()">My Name!</button>
+        <button type="button" onclick="myFunction()">My Nickname!</button>
 
-<p id="fullname"></p>
 <p id="nickname"></p>
+<p id="demo"></p>
 
 <script>
 function myFunction() {
-  document.getElementById("fullname").innerHTML = "Kimberly Ann Altea";
-  document.getElementById("nickname").innerHTML = "(kimmy)";
+  document.getElementById("nickname").innerHTML = "kimmyyy";
 }
+</script>
+<p id="person"></p>
+<script>
+    const person = {fname:"Kimberly Ann", lname:"Altea", age:18};
+
+let txt = "";
+for (let x in person){
+    txt += person[x] + " ";
+}
+document.getElementById("person").innerHTML = txt;
+</script>
+<p>My Favorite color:</p>
+<p id="Color"></p>
+<script>
+    const Color = ["SkyBlue", "Black", "Cream"];
+
+let color = "";
+for (let x of Color) {
+  color += x + "<br>";
+}
+
+document.getElementById("Color").innerHTML = color;
+</script>
+<script>
+
 </script>
 
     </div>
@@ -50,8 +75,17 @@ function myFunction() {
             </div>
         </div>
     </div>
-   
 </div>
 </div>
+<p id="rem"></p>
+<script>
+    let language ="Don't just exist, live";
+
+    let k = "";
+    for (let x of language){
+        k += x + "<br>";
+    }
+document.getElementById("rem").innerHTML = k;
+</script>
 </body>
 </html>
