@@ -17,6 +17,10 @@
 <div class="wrapper">
     <div class="left">
         <img src="images/ALTEA-LOGO.png" alt="user" width="250">
+        <script>
+            window.alert('Hi guys ^_^');
+            
+            </script>
         <button type="button" onclick="myFunction()">My Nickname!</button>
 
 <p id="nickname"></p>
@@ -176,5 +180,37 @@ echo $comment;
 echo "<br>";
 echo $gender;
 ?>
+
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+$servername = "192.168.150.213";
+$username = "webprogmi211";
+$password = "j@zzyAngle30";
+$dbname = "webprogmi211"
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO kealtea_myguests (firstname, lastname, email)
+VALUES ('$name', '', '$email')";
+
+if ($conn->query($sql) === TRUE) {
+echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+    
+
+$conn->close();
+}
+?>
+
+
 </body>
 </html>
