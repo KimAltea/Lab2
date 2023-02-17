@@ -200,15 +200,16 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO kealtea_myguests (fullname, email, website, comment)
 VALUES ('$name', '$email', '$website', '$comment')";
 
-if ($conn->query($sql) === TRUE) {
-echo "New record created successfully";
+if ($conn->multi_query($sql) === TRUE) {
+ echo "New records created successfully";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+ echo "Error: " . $sql . "<br>" . $conn->error;
 }
-    
+$sql = "SELECT id, Lastname, email, website, comment FROM kealtea_myguests";
+$result = $conn->query($sql);
+// PHP_MySQL L 15.9 Select Data
 
 $conn->close();
-}
 ?>
 
 
